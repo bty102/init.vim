@@ -1,0 +1,98 @@
+
+{
+  "diagnostic.errorSign":"\uea87",
+  "diagnostic.warningSign":"\uea6c",
+
+
+
+  "suggest.completionItemKindLabels": {
+        "keyword": "\ueb62",
+        "variable": "\udb82\udee7",
+        "value": "\uea95",
+        "operator": "\ueb64",
+        "constructor": "\uea8c",
+        "function": "\udb82\udc71",
+        "reference": "\uea94",
+        "constant": "\ueb5d",
+        "method": "\uea8c",
+        "struct": "\uea91",
+        "class": "\ueb5b",
+        "interface": "\ueb61",
+        "text": "\uea93",
+        "enum": "\uea95",
+        "enumMember": "\ueb5e",
+        "module": "\udb80\udd69",
+        "color": "\ueb5c",
+        "property": "\ueb65",
+        "field": "\ueb5f",
+        "unit": "\uea96",
+        "event": "\uea86",
+        "file": "\uea7b",
+        "folder": "\uea83",
+        "snippet": "\ueb66",
+        "typeParameter": "\uea92",
+        "default": "\ue612"
+    },
+
+
+  //clangd
+  //"clangd.path": "~\\AppData\\Local\\coc\\extensions\\coc-clangd-data\\install\\15.0.6\\clangd_15.0.6\\bin\\clangd.exe",
+  //"clangd.disableDiagnostics": true,
+  "clangd.path": "D:\\msys64\\mingw64\\bin\\clangd.exe",
+  
+  // "languageserver": {
+  //   "clangd": {
+  //     "command": "clangd",
+  //     "rootPatterns": ["compile_flags.txt", "compile_commands.json"],
+  //     "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"]
+  // }
+  // },
+
+  //ccls
+  // "languageserver": {
+  // "ccls": {
+  //   "command": "ccls",
+  //   "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"],
+  //   "rootPatterns": [".ccls", "compile_commands.json", ".git/", ".hg/"],
+  //   "initializationOptions": {
+  //       "cache": {
+  //         "directory": "/tmp/ccls"
+  //       }
+  //       // "index": {
+  //       //   "onChange": true
+  //       // }
+  //     }
+  //   }
+  // },
+
+
+  //tat cac nguon hoan thanh
+  //"coc.source.around.enable": false,
+  //"coc.source.buffer.enable": false,
+  //"coc.source.file.enable": false,
+
+  //tabnine
+  "tabnine.shortcut": "󱍄",
+
+	//pylsp
+  "pylsp.commandPath": "D:\\python\\Scripts\\pylsp.exe",
+	//"pylsp.trace.server": "messages",
+  //"pylsp.disableProgressNotifications": false,
+	//"pylsp.plugins.pydocstyle.enabled": true,
+	//"pylsp.plugins.rope_completion.enabled": true,
+
+	"coc.preferences.enableMessageDialog": true, //Enable messages shown in notification dialog.
+
+	//"coc.preferences.currentFunctionSymbolAutoUpdate": true, //Automatically update the value of b:coc_current_function on CursorMove event
+
+	//"list.source.outline.ctagsFiletypes": [c, cpp, py] //Filetypes that should use ctags for outline instead of language server.
+
+	//pyright
+	//"pyright.server": "D:\\python\\Scripts\\pyright.exe",
+	//"python.pythonPath": "D:\\python\\python.exe",
+	//"python.linting.pydocstyleEnabled": true,
+	//"python.linting.pyflakesEnabled": true,
+	//"python.linting.pyflakesPath": "D:\\python\\Scripts\\pyflakes.exe",
+	//"pyright.disableDiagnostics": true,
+}
+

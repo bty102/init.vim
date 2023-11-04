@@ -74,25 +74,25 @@
   //tabnine
   "tabnine.shortcut": "󱍄",
 
-	//pylsp
+  //pylsp
   "pylsp.commandPath": "D:\\python\\Scripts\\pylsp.exe",
-	//"pylsp.trace.server": "messages",
+  //"pylsp.trace.server": "messages",
   //"pylsp.disableProgressNotifications": false,
-	//"pylsp.plugins.pydocstyle.enabled": true,
-	//"pylsp.plugins.rope_completion.enabled": true,
+  //"pylsp.plugins.pydocstyle.enabled": true,
+  //"pylsp.plugins.rope_completion.enabled": true,
 
-	"coc.preferences.enableMessageDialog": true, //Enable messages shown in notification dialog.
+  "coc.preferences.enableMessageDialog": true, //Enable messages shown in notification dialog.
 
-	//"coc.preferences.currentFunctionSymbolAutoUpdate": true, //Automatically update the value of b:coc_current_function on CursorMove event
+  //"coc.preferences.currentFunctionSymbolAutoUpdate": true, //Automatically update the value of b:coc_current_function on CursorMove event
 
-	//"list.source.outline.ctagsFiletypes": [c, cpp, py] //Filetypes that should use ctags for outline instead of language server.
+  //"list.source.outline.ctagsFiletypes": [c, cpp, py] //Filetypes that should use ctags for outline instead of language server.
 
-	//pyright
-	//"pyright.server": "D:\\python\\Scripts\\pyright.exe",
-	//"python.pythonPath": "D:\\python\\python.exe",
-	//"python.linting.pydocstyleEnabled": true,
-	//"python.linting.pyflakesEnabled": true,
-	//"python.linting.pyflakesPath": "D:\\python\\Scripts\\pyflakes.exe",
-	//"pyright.disableDiagnostics": true,
+  //pyright
+  //"pyright.server": "D:\\python\\Scripts\\pyright.exe",
+  //"python.pythonPath": "D:\\python\\python.exe",
+  //"python.linting.pydocstyleEnabled": true,
+  //"python.linting.pyflakesEnabled": true,
+  //"python.linting.pyflakesPath": "D:\\python\\Scripts\\pyflakes.exe",
+  //"pyright.disableDiagnostics": true,
 }
 

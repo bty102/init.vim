@@ -37,7 +37,7 @@ set nocompatible
 "set listchars=tab:\¦\       " Tab charactor
 "set list
 "set nosmarttab
-"set termguicolors
+set termguicolors
 "set lines=47
 
 " Disable automatic comment in newline
@@ -60,24 +60,28 @@ call plug#begin('D:\neovim\plugged')
 "theme
 Plug 'dracula/vim',{'as':'dracula'} 		"dracula theme 
 Plug 'joshdick/onedark.vim' 			"onedark theme 
-Plug 'nightsense/carbonized'
-Plug 'jonathanfilip/vim-lucius'
+"Plug 'nightsense/carbonized'
+"Plug 'jonathanfilip/vim-lucius'
 Plug 'morhetz/gruvbox'
-Plug 'bluz71/vim-nightfly-colors', { 'as': 'nightfly' }
-Plug 'bluz71/vim-moonfly-colors', { 'as': 'moonfly' }
+"Plug 'bluz71/vim-nightfly-colors', { 'as': 'nightfly' }
+"Plug 'bluz71/vim-moonfly-colors', { 'as': 'moonfly' }
 Plug 'tomasiser/vim-code-dark'
-Plug 'arzg/vim-colors-xcode'
-Plug 'crusoexia/vim-monokai'
-Plug 'ghifarit53/tokyonight-vim'
+"Plug 'arzg/vim-colors-xcode'
+"Plug 'crusoexia/vim-monokai'
+"Plug 'ghifarit53/tokyonight-vim'
+Plug 'sainnhe/gruvbox-material'
 
 "status bar
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+"Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline-themes'
+Plug 'nvim-lualine/lualine.nvim'
 
 "file explorer
-Plug 'preservim/nerdtree'
+"Plug 'preservim/nerdtree'
 "Plug 'Xuyuanp/nerdtree-git-plugin'            " Git status
 "Plug 'ryanoasis/vim-devicons'
+Plug 'nvim-tree/nvim-web-devicons' " optional
+Plug 'nvim-tree/nvim-tree.lua'
 
 "auto complete
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -98,14 +102,14 @@ Plug 'Yggdroot/indentLine'
 Plug 'tpope/vim-commentary'
 
 "them cac bieu tuong 
-Plug 'ryanoasis/vim-devicons'
+"Plug 'ryanoasis/vim-devicons'
 " Plug 'tiagofumo'
 "           \ .'/vim-nerdtree-syntax-highlight'
 " Plug 'jcharum/vim-nerdtree-syntax-highlight',
 "     \ {'branch': 'escape-keys'}
 
 "tagbar
-Plug 'majutsushi/tagbar'
+"Plug 'majutsushi/tagbar'
 
 "terminal 
 Plug 'voldikss/vim-floaterm'
@@ -116,6 +120,9 @@ Plug 'voldikss/vim-floaterm'
 " else
 "   Plug 'mhinz/vim-signify', { 'tag': 'legacy' }
 " endif
+
+"buffer line
+Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
 
 call plug#end()
 
@@ -163,7 +170,7 @@ call plug#end()
 "colorscheme moonfly 
 
 "vim-code-dark
-set termguicolors
+"set termguicolors
 set background=dark
 "let g:codedark_conservative=1
 let g:codedark_modern=1
@@ -185,14 +192,26 @@ colorscheme codedark
 
 "tokyonight-vim
 "set termguicolors
-
 "let g:tokyonight_style = 'night' " available: night, storm
 ""let g:tokyonight_enable_italic = 1
 "let g:tokyonight_disable_italic_comment = 1
 "let g:tokyonight_transparent_background = 1
 "let g:tokyonight_menu_selection_background = 'red'
-
 "colorscheme tokyonight
+
+"gruvbox-material
+"set background=dark "For dark version.
+"let g:gruvbox_material_background = 'hard'
+""let g:gruvbox_material_better_performance = 1 "For better performance
+"let g:gruvbox_material_disable_italic_comment = 1
+"let g:gruvbox_material_diagnostic_text_highlight = 1
+""let g:gruvbox_material_diagnostic_line_highlight = 1
+"let g:gruvbox_material_show_eob=0
+"let g:gruvbox_material_foreground = 'original'
+""let g:gruvbox_material_sign_column_background = 'grey'
+""let g:gruvbox_material_statusline_style = 'original'
+"let g:gruvbox_material_enable_bold = 1
+"colorscheme gruvbox-material
 
 "==========================
 ""Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
@@ -219,12 +238,17 @@ colorscheme codedark
 "   \,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor
 "   \,sm:block-blinkwait175-blinkoff150-blinkon175
 
+"highlight WinSeparator guifg=Black
+"highlight SignColumn guibg=#1d2021
+"highlight CursorLineNr guifg=#fabd2f guibg=none
 "highlight NormalNC guibg=Blue
 "highlight CursorLine guibg=#333333
 "highlight SignColumn guibg=#111111
 "highlight LineNr guibg=#111111
-highlight CocErrorHighlight guifg=Red gui=underline
-highlight CocWarningHighlight guifg=#f0a711 gui=underline
+"highlight CocErrorHighlight guifg=Red gui=underline
+"highlight CocWarningHighlight guifg=#FF9900 gui=underline
+"highlight CocErrorSign guifg=#fb4934 guibg=none
+"highlight CocWarningSign guifg=#fe8019 guibg=none
 
 "=====================================================================================================
 
@@ -232,7 +256,7 @@ highlight CocWarningHighlight guifg=#f0a711 gui=underline
 let g:indentLine_char = '│'
 
 "LOAI FILE TAT KI TU THUT DONG
-let g:indentLine_fileTypeExclude = ['tagbar', 'floaterm'] "loai file khong bat ki tu thut dong
+let g:indentLine_fileTypeExclude = ['tagbar', 'floaterm', 'coc-explorer', 'NvimTree'] "loai file khong bat ki tu thut dong
 
 "====================================================================================================
 "THIET LAP COMMENT THEO TUNG LOAI FILE  
@@ -243,6 +267,7 @@ autocmd FileType c,cpp setlocal commentstring=//%s  "su dung // de comment code 
 
 au BufNewFile,BufRead *.cpp set tabstop=4 softtabstop=4 shiftwidth=4 expandtab autoindent
 au BufNewFile,BufRead *.c set tabstop=4 softtabstop=4 shiftwidth=4 expandtab autoindent
+au BufNewFile,BufRead *.h set tabstop=4 softtabstop=4 shiftwidth=4 expandtab autoindent
 au BufNewFile,BufRead *.vim set tabstop=4 softtabstop=4 shiftwidth=4 expandtab autoindent
 au BufNewFile,BufRead *.py set tabstop=4 softtabstop=4 shiftwidth=4 expandtab autoindent
 au BufNewFile,BufRead coc-settings.json set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
@@ -251,12 +276,15 @@ au BufNewFile,BufRead coc-settings.json set tabstop=2 softtabstop=2 shiftwidth=2
 
 "THEM VAO CAC FILE CAU HINH KHAC 
 let NvimSettingDir = 'D:\neovim\plug-setting\'
-execute 'source '.NvimSettingDir.'vimairline.vim'
-execute 'source '.NvimSettingDir.'nerdtree.vim'
+"execute 'source '.NvimSettingDir.'vimairline.vim'
+"execute 'source '.NvimSettingDir.'nerdtree.vim'
 execute 'source '.NvimSettingDir.'coc.vim'
 "execute 'source '.NvimSettingDir.'ale.vim'
 "execute 'source '.NvimSettingDir.'startify.vim'
-execute 'source '.NvimSettingDir.'ctags.vim'
+"execute 'source '.NvimSettingDir.'ctags.vim'
 execute 'source '.NvimSettingDir.'floaterm.vim'
-execute 'source '.NvimSettingDir.'devicons.vim'
+"execute 'source '.NvimSettingDir.'devicons.vim'
 "execute 'source '.NvimSettingDir.'ntSyntaxHL.vim'
+execute 'source '.NvimSettingDir.'nvimTree.vim'
+execute 'source '.NvimSettingDir.'lualine.vim'
+execute 'source '.NvimSettingDir.'bufferline.vim'

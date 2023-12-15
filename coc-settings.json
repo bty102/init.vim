@@ -1,9 +1,14 @@
 
 {
-  "diagnostic.errorSign":"\uea87",
-  "diagnostic.warningSign":"\uea6c",
+  "diagnostic.errorSign":"",
+  "diagnostic.warningSign":"",
 
+  //"suggest.floatConfig.border": true,
+  //"suggest.floatConfig.borderhighlight": "#333333",
+  // "suggest.floatConfig.rounded": true,
+  // "suggest.floatConfig.shadow": true,
 
+  "suggest.formatItems": ["kind","abbr","menu","shortcut"],
 
   "suggest.completionItemKindLabels": {
         "keyword": "\ueb62",
@@ -72,7 +77,7 @@
   //"coc.source.file.enable": false,
 
   //tabnine
-  "tabnine.shortcut": "󱍄",
+  //"tabnine.shortcut": "󱍄",
 
   //pylsp
   "pylsp.commandPath": "D:\\python\\Scripts\\pylsp.exe",
@@ -94,5 +99,30 @@
   //"python.linting.pyflakesEnabled": true,
   //"python.linting.pyflakesPath": "D:\\python\\Scripts\\pyflakes.exe",
   //"pyright.disableDiagnostics": true,
+
+  //coc-explorer
+  //"explorer.width": 30,
+  //"explorer.icon.enableNerdfont": true,
+  //"explorer.icon.customIcons": {
+  //  "icons": {
+  //    "exe": {
+  //      "code": "󰣆",
+  //      "color": "#00CC99"
+  //    },
+  //    "python": {
+  //      "code": "",
+  //      "color": "#FFFF99"
+  //    }
+  //  },
+  //  "extensions": {
+  //    "exe": "exe",
+  //    "py": "python"
+  //  },
+  //  "filenames": {},
+  //  "dirnames": {},
+  //  "patternMatches": {},
+  //  "dirPatternMatches": {}
+  //},
+  ////"explorer.diagnostic.enableSubscriptNumber": true,
 }
 

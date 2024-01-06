@@ -58,17 +58,6 @@ let g:python3_host_prog = 'D:\python\python.exe'
 call plug#begin('D:\neovim\plugged')
 
 "theme
-Plug 'dracula/vim',{'as':'dracula'} 		"dracula theme 
-Plug 'joshdick/onedark.vim' 			"onedark theme 
-"Plug 'nightsense/carbonized'
-"Plug 'jonathanfilip/vim-lucius'
-Plug 'morhetz/gruvbox'
-"Plug 'bluz71/vim-nightfly-colors', { 'as': 'nightfly' }
-"Plug 'bluz71/vim-moonfly-colors', { 'as': 'moonfly' }
-Plug 'tomasiser/vim-code-dark'
-"Plug 'arzg/vim-colors-xcode'
-"Plug 'crusoexia/vim-monokai'
-"Plug 'ghifarit53/tokyonight-vim'
 Plug 'sainnhe/gruvbox-material'
 
 "status bar
@@ -90,9 +79,11 @@ Plug 'jiangmiao/auto-pairs'
 
 "syntax highlight
 Plug 'sheerun/vim-polyglot'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
-"giong cot 
-Plug 'Yggdroot/indentLine'
+"giong cot/thut le 
+"Plug 'Yggdroot/indentLine'
+Plug 'lukas-reineke/indent-blankline.nvim'
 
 "trang chu cho neovim 
 "Plug 'mhinz/vim-startify'
@@ -110,6 +101,7 @@ Plug 'tpope/vim-commentary'
 
 "tagbar
 "Plug 'majutsushi/tagbar'
+"Plug 'liuchengxu/vista.vim'
 
 "terminal 
 Plug 'voldikss/vim-floaterm'
@@ -124,96 +116,30 @@ Plug 'voldikss/vim-floaterm'
 "buffer line
 Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
 
+"notification
+Plug 'rcarriga/nvim-notify'
+
 call plug#end()
 
 "=====================================================================================================================
 "THIET LAP THEME CHO NEOVIM 
 
-"dracula
-"set background=dark
-""let g:dracula_bold = 1
-"let g:dracula_italic = 0
-"let g:dracula_colorterm = 0
-"colorscheme dracula
-
-"onedark 
-"set background=dark
-"if (has("autocmd"))
-"  augroup colorextend
-"    autocmd!
-    " Make `Function`s bold in GUI mode
-"    autocmd ColorScheme * call onedark#extend_highlight("Function", { "gui": "bold" })
-    " Override the `Statement` foreground color in 256-color mode
-    "autocmd ColorScheme * call onedark#extend_highlight("Statement", { "fg": { "cterm": 128 } })
-    " Override the `Identifier` background color in GUI mode
-    "autocmd ColorScheme * call onedark#extend_highlight("Identifier", { "bg": { "gui": "#333333" } })
-"  augroup END
-"endif
-"colorscheme onedark 
-
-"gruvbox
-"set background=dark
-"let g:gruvbox_contrast_dark='hard'
-" set background=light
-" let g:gruvbox_contrast_light = 'hard' 
-"let g:gruvbox_transparent_bg = 1
-"colorscheme gruvbox
-
-"nightfly 
-"let g:nightflyItalics = v:false
-"let g:nightflyTransparent = v:true
-"colorscheme nightfly
-
-"moonfly
-"let g:moonflyItalics = v:false
-"let g:moonflyCursorColor = v:true
-"colorscheme moonfly 
-
-"vim-code-dark
-"set termguicolors
-set background=dark
-"let g:codedark_conservative=1
-let g:codedark_modern=1
-"let g:codedark_italics=1
-"let g:codedark_transparent=1
-colorscheme codedark
-
-"vim-colors-xcode
-"set background=dark
-"let g:xcodelight_green_comments = 1
-" let g:xcode_green_comments = 1
-" set background=light
-" colorscheme xcode
-"colorscheme xcodewwdc
-
-"vim-monokai
-"syntax on
-"colorscheme monokai
-
-"tokyonight-vim
-"set termguicolors
-"let g:tokyonight_style = 'night' " available: night, storm
-""let g:tokyonight_enable_italic = 1
-"let g:tokyonight_disable_italic_comment = 1
-"let g:tokyonight_transparent_background = 1
-"let g:tokyonight_menu_selection_background = 'red'
-"colorscheme tokyonight
-
 "gruvbox-material
-"set background=dark "For dark version.
-"let g:gruvbox_material_background = 'hard'
-""let g:gruvbox_material_better_performance = 1 "For better performance
-"let g:gruvbox_material_disable_italic_comment = 1
+set background=dark "For dark version.
+let g:gruvbox_material_background = 'hard'
+"let g:gruvbox_material_better_performance = 1 "For better performance
+let g:gruvbox_material_disable_italic_comment = 1
 "let g:gruvbox_material_diagnostic_text_highlight = 1
-""let g:gruvbox_material_diagnostic_line_highlight = 1
+let g:gruvbox_material_diagnostic_line_highlight = 1
 "let g:gruvbox_material_show_eob=0
-"let g:gruvbox_material_foreground = 'original'
-""let g:gruvbox_material_sign_column_background = 'grey'
-""let g:gruvbox_material_statusline_style = 'original'
-"let g:gruvbox_material_enable_bold = 1
-"colorscheme gruvbox-material
+let g:gruvbox_material_foreground = 'original'
+"let g:gruvbox_material_sign_column_background = 'grey'
+"let g:gruvbox_material_statusline_style = 'original'
+let g:gruvbox_material_enable_bold = 1
+"let g:gruvbox_material_float_style = 'dim'
+colorscheme gruvbox-material
 
-"==========================
+"========================================================================================================
 ""Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
 ""If you're using tmux version 2.2 or later, you can remove the outermost $TMUX check and use tmux's 24-bit color support
 ""(see < http://sunaku.github.io/tmux-24bit-color.html#usage > for more information.)
@@ -253,10 +179,10 @@ colorscheme codedark
 "=====================================================================================================
 
 "THIET LAP KI TU THUT LE 
-let g:indentLine_char = '│'
+"let g:indentLine_char = '│'
 
 "LOAI FILE TAT KI TU THUT DONG
-let g:indentLine_fileTypeExclude = ['tagbar', 'floaterm', 'coc-explorer', 'NvimTree'] "loai file khong bat ki tu thut dong
+"let g:indentLine_fileTypeExclude = ['tagbar', 'floaterm', 'coc-explorer', 'NvimTree'] "loai file khong bat ki tu thut dong
 
 "====================================================================================================
 "THIET LAP COMMENT THEO TUNG LOAI FILE  
@@ -266,6 +192,7 @@ autocmd FileType c,cpp setlocal commentstring=//%s  "su dung // de comment code 
 "=========================================================================
 
 au BufNewFile,BufRead *.cpp set tabstop=4 softtabstop=4 shiftwidth=4 expandtab autoindent
+au BufNewFile,BufRead *.cc set tabstop=4 softtabstop=4 shiftwidth=4 expandtab autoindent
 au BufNewFile,BufRead *.c set tabstop=4 softtabstop=4 shiftwidth=4 expandtab autoindent
 au BufNewFile,BufRead *.h set tabstop=4 softtabstop=4 shiftwidth=4 expandtab autoindent
 au BufNewFile,BufRead *.vim set tabstop=4 softtabstop=4 shiftwidth=4 expandtab autoindent
@@ -288,3 +215,7 @@ execute 'source '.NvimSettingDir.'floaterm.vim'
 execute 'source '.NvimSettingDir.'nvimTree.vim'
 execute 'source '.NvimSettingDir.'lualine.vim'
 execute 'source '.NvimSettingDir.'bufferline.vim'
+execute 'source '.NvimSettingDir.'indent_blankline.vim'
+execute 'source '.NvimSettingDir.'treesitter.vim'
+execute 'source '.NvimSettingDir.'notify.vim'
+"execute 'source '.NvimSettingDir.'vista.vim'

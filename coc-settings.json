@@ -88,7 +88,7 @@
 
   "coc.preferences.enableMessageDialog": true, //Enable messages shown in notification dialog.
 
-  //"coc.preferences.currentFunctionSymbolAutoUpdate": true, //Automatically update the value of b:coc_current_function on CursorMove event
+  "coc.preferences.currentFunctionSymbolAutoUpdate": true, //Automatically update the value of b:coc_current_function on CursorMove event
 
   //"list.source.outline.ctagsFiletypes": [c, cpp, py] //Filetypes that should use ctags for outline instead of language server.
 

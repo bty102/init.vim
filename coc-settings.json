@@ -1,12 +1,6 @@
-
 {
   "diagnostic.errorSign":"",
   "diagnostic.warningSign":"",
-
-  //"suggest.floatConfig.border": true,
-  //"suggest.floatConfig.borderhighlight": "#333333",
-  // "suggest.floatConfig.rounded": true,
-  // "suggest.floatConfig.shadow": true,
 
   "suggest.formatItems": ["kind","abbr","menu","shortcut"],
 
@@ -39,6 +33,7 @@
         "default": "\ue612"
     },
 
+//---------------------------------------------------------------------------------------------------------------------------
 
   //clangd
   //"clangd.path": "~\\AppData\\Local\\coc\\extensions\\coc-clangd-data\\install\\15.0.6\\clangd_15.0.6\\bin\\clangd.exe",
@@ -52,6 +47,8 @@
   //     "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"]
   // }
   // },
+
+//-------------------------------------------------------------------------------------------------------------------------------
 
   //ccls
   // "languageserver": {
@@ -70,14 +67,14 @@
   //   }
   // },
 
+//---------------------------------------------------------------------------------
 
   //tat cac nguon hoan thanh
   //"coc.source.around.enable": false,
   //"coc.source.buffer.enable": false,
   //"coc.source.file.enable": false,
 
-  //tabnine
-  //"tabnine.shortcut": "󱍄",
+//--------------------------------------------------
 
   //pylsp
   "pylsp.commandPath": "D:\\python\\Scripts\\pylsp.exe",
@@ -86,43 +83,9 @@
   //"pylsp.plugins.pydocstyle.enabled": true,
   //"pylsp.plugins.rope_completion.enabled": true,
 
+//---------------------------------------------------------
+
   "coc.preferences.enableMessageDialog": true, //Enable messages shown in notification dialog.
 
   "coc.preferences.currentFunctionSymbolAutoUpdate": true, //Automatically update the value of b:coc_current_function on CursorMove event
-
-  //"list.source.outline.ctagsFiletypes": [c, cpp, py] //Filetypes that should use ctags for outline instead of language server.
-
-  //pyright
-  //"pyright.server": "D:\\python\\Scripts\\pyright.exe",
-  //"python.pythonPath": "D:\\python\\python.exe",
-  //"python.linting.pydocstyleEnabled": true,
-  //"python.linting.pyflakesEnabled": true,
-  //"python.linting.pyflakesPath": "D:\\python\\Scripts\\pyflakes.exe",
-  //"pyright.disableDiagnostics": true,
-
-  //coc-explorer
-  //"explorer.width": 30,
-  //"explorer.icon.enableNerdfont": true,
-  //"explorer.icon.customIcons": {
-  //  "icons": {
-  //    "exe": {
-  //      "code": "󰣆",
-  //      "color": "#00CC99"
-  //    },
-  //    "python": {
-  //      "code": "",
-  //      "color": "#FFFF99"
-  //    }
-  //  },
-  //  "extensions": {
-  //    "exe": "exe",
-  //    "py": "python"
-  //  },
-  //  "filenames": {},
-  //  "dirnames": {},
-  //  "patternMatches": {},
-  //  "dirPatternMatches": {}
-  //},
-  ////"explorer.diagnostic.enableSubscriptNumber": true,
 }
-

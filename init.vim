@@ -34,14 +34,14 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 let g:polyglot_disabled = ['autoindent']
 
-let g:python3_host_prog = 'D:\python\python.exe'
+"let g:python3_host_prog = 'D:\python\python.exe'
 "let g:python3_host_prog = 'D:\msys64\mingw64\bin\python3.exe'
 
 "=====================================================================================================================
 
 "PLUGINS
 
-call plug#begin('D:\neovim\plugged')
+call plug#begin('D:\neovim\plugins')
 
 "theme
 Plug 'sainnhe/gruvbox-material'
@@ -103,7 +103,7 @@ Plug 'voldikss/vim-floaterm'
 Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
 
 "notification
-Plug 'rcarriga/nvim-notify'
+"Plug 'rcarriga/nvim-notify'
 
 "AI
 Plug 'Exafunction/codeium.vim', { 'branch': 'main' }
@@ -143,11 +143,12 @@ au BufNewFile,BufRead *.h set tabstop=4 softtabstop=4 shiftwidth=4 expandtab aut
 au BufNewFile,BufRead *.vim set tabstop=4 softtabstop=4 shiftwidth=4 expandtab autoindent
 au BufNewFile,BufRead *.py set tabstop=4 softtabstop=4 shiftwidth=4 expandtab autoindent
 au BufNewFile,BufRead coc-settings.json set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+au BufNewFile,BufRead *.java set tabstop=4 softtabstop=4 shiftwidth=4 expandtab autoindent
 
 "=============================================================================================================
 
 "THEM VAO CAC FILE CAU HINH KHAC 
-let NvimSettingDir = 'D:\neovim\plug-setting\'
+let NvimSettingDir = 'D:\neovim\plugin-settings\'
 "execute 'source '.NvimSettingDir.'vimairline.vim'
 "execute 'source '.NvimSettingDir.'nerdtree.vim'
 execute 'source '.NvimSettingDir.'coc.vim'
@@ -162,6 +163,6 @@ execute 'source '.NvimSettingDir.'lualine.vim'
 execute 'source '.NvimSettingDir.'bufferline.vim'
 execute 'source '.NvimSettingDir.'indent_blankline.vim'
 execute 'source '.NvimSettingDir.'treesitter.vim'
-execute 'source '.NvimSettingDir.'notify.vim'
+"execute 'source '.NvimSettingDir.'notify.vim'
 "execute 'source '.NvimSettingDir.'vista.vim'
 execute 'source '.NvimSettingDir.'codeium.vim'

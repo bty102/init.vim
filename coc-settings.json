@@ -38,7 +38,7 @@
   //clangd
   //"clangd.path": "~\\AppData\\Local\\coc\\extensions\\coc-clangd-data\\install\\15.0.6\\clangd_15.0.6\\bin\\clangd.exe",
   //"clangd.disableDiagnostics": true,
-  "clangd.path": "D:\\msys64\\mingw64\\bin\\clangd.exe",
+  //"clangd.path": "D:\\msys64\\mingw64\\bin\\clangd.exe",
   
   // "languageserver": {
   //   "clangd": {
@@ -77,7 +77,7 @@
 //--------------------------------------------------
 
   //pylsp
-  "pylsp.commandPath": "D:\\python\\Scripts\\pylsp.exe",
+  //"pylsp.commandPath": "D:\\python\\Scripts\\pylsp.exe",
   //"pylsp.trace.server": "messages",
   //"pylsp.disableProgressNotifications": false,
   //"pylsp.plugins.pydocstyle.enabled": true,

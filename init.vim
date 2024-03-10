@@ -45,6 +45,7 @@ call plug#begin('D:\neovim\plugins')
 
 "theme
 Plug 'sainnhe/gruvbox-material'
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 
 "status bar
 "Plug 'vim-airline/vim-airline'
@@ -114,19 +115,70 @@ call plug#end()
 "THIET LAP THEME CHO NEOVIM 
 
 "gruvbox-material
-set background=dark "For dark version.
-let g:gruvbox_material_background = 'hard'
+"set background=dark "For dark version.
+"let g:gruvbox_material_background = 'hard'
 "let g:gruvbox_material_better_performance = 1 "For better performance
-let g:gruvbox_material_disable_italic_comment = 1
+"let g:gruvbox_material_disable_italic_comment = 1
 "let g:gruvbox_material_diagnostic_text_highlight = 1
-let g:gruvbox_material_diagnostic_line_highlight = 1
+"let g:gruvbox_material_diagnostic_line_highlight = 1
 "let g:gruvbox_material_show_eob=0
-let g:gruvbox_material_foreground = 'original'
+"let g:gruvbox_material_foreground = 'original'
 "let g:gruvbox_material_sign_column_background = 'grey'
 "let g:gruvbox_material_statusline_style = 'original'
-let g:gruvbox_material_enable_bold = 1
+"let g:gruvbox_material_enable_bold = 1
 "let g:gruvbox_material_float_style = 'dim'
-colorscheme gruvbox-material
+"colorscheme gruvbox-material
+
+"Catppuccin
+lua << END
+require("catppuccin").setup({
+    no_italic = true, -- Force no italic
+    styles = { -- Handles the styles of general hi groups (see `:h highlight-args`):
+        comments = {}, -- Change the style of comments
+        conditionals = {},
+        loops = {},
+        functions = {"bold"},
+        keywords = {},
+        strings = {},
+        variables = {},
+        numbers = {},
+        booleans = {},
+        properties = {},
+        types = {},
+        operators = {},
+        -- miscs = {}, -- Uncomment to turn off hard-coded styles
+    },
+    integrations = {
+        nvimtree = true,
+        treesitter = true,
+        coc_nvim = true,
+        native_lsp = {
+            enabled = true,
+            virtual_text = {
+                errors = { "italic" },
+                hints = { "italic" },
+                warnings = { "italic" },
+                information = { "italic" },
+            },
+            underlines = {
+                errors = { "underline" },
+                hints = { "underline" },
+                warnings = { "underline" },
+                information = { "underline" },
+            },
+            inlay_hints = {
+                background = true,
+            },
+        },
+        indent_blankline = {
+            enabled = true,
+            scope_color = "overlay0", -- catppuccin color (eg. `lavender`) Default: text
+            colored_indent_levels = false,
+        },
+    }
+})
+END
+colorscheme catppuccin " catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha
 
 "========================================================================================================
 

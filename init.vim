@@ -109,6 +109,11 @@ Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
 "AI
 Plug 'Exafunction/codeium.vim', { 'branch': 'main' }
 
+"telescope
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.6' }
+Plug 'fannheyward/telescope-coc.nvim'
+
 call plug#end()
 
 "=====================================================================================================================
@@ -132,6 +137,7 @@ call plug#end()
 "Catppuccin
 lua << END
 require("catppuccin").setup({
+    show_end_of_buffer = true, -- shows the '~' characters after the end of buffers
     no_italic = true, -- Force no italic
     styles = { -- Handles the styles of general hi groups (see `:h highlight-args`):
         comments = {}, -- Change the style of comments
@@ -147,6 +153,11 @@ require("catppuccin").setup({
         types = {},
         operators = {},
         -- miscs = {}, -- Uncomment to turn off hard-coded styles
+    },
+    custom_highlights = {
+        CocErrorHighlight = {bg = "#4a2f24", style = {"underline"}},
+        CocWarningHighlight = {bg = "#47401e", style = {"underline"}},
+        CocHighlightText = {bg = "#484978"},
     },
     integrations = {
         nvimtree = true,
@@ -175,6 +186,10 @@ require("catppuccin").setup({
             scope_color = "overlay0", -- catppuccin color (eg. `lavender`) Default: text
             colored_indent_levels = false,
         },
+        telescope = {
+            enabled = true,
+            -- style = "nvchad"
+        },
     }
 })
 END
@@ -197,7 +212,12 @@ au BufNewFile,BufRead *.py set tabstop=4 softtabstop=4 shiftwidth=4 expandtab au
 au BufNewFile,BufRead coc-settings.json set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 au BufNewFile,BufRead *.java set tabstop=4 softtabstop=4 shiftwidth=4 expandtab autoindent
 
-"=============================================================================================================
+"============================================================================================
+
+"MAPS
+tnoremap <Esc> <C-\><C-n>
+
+"===========================================================
 
 "THEM VAO CAC FILE CAU HINH KHAC 
 let NvimSettingDir = 'D:\neovim\plugin-settings\'
@@ -218,3 +238,4 @@ execute 'source '.NvimSettingDir.'treesitter.vim'
 "execute 'source '.NvimSettingDir.'notify.vim'
 "execute 'source '.NvimSettingDir.'vista.vim'
 execute 'source '.NvimSettingDir.'codeium.vim'
+execute 'source '.NvimSettingDir.'telescope.vim'

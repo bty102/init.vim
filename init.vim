@@ -66,7 +66,6 @@ Plug 'jiangmiao/auto-pairs'
 
 "syntax highlight
 Plug 'sheerun/vim-polyglot'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 "giong cot/thut le 
 "Plug 'Yggdroot/indentLine'
@@ -113,6 +112,13 @@ Plug 'Exafunction/codeium.vim', { 'branch': 'main' }
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.6' }
 Plug 'fannheyward/telescope-coc.nvim'
+
+"snippets
+Plug 'honza/vim-snippets'
+
+"treesitter
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/nvim-treesitter-context'
 
 call plug#end()
 
@@ -190,6 +196,7 @@ require("catppuccin").setup({
             enabled = true,
             -- style = "nvchad"
         },
+        treesitter_context = true,
     }
 })
 END
@@ -215,7 +222,7 @@ au BufNewFile,BufRead *.java set tabstop=4 softtabstop=4 shiftwidth=4 expandtab 
 "============================================================================================
 
 "MAPS
-tnoremap <Esc> <C-\><C-n>
+"tnoremap <Esc> <C-\><C-n>
 
 "===========================================================
 

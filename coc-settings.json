@@ -88,4 +88,22 @@
   "coc.preferences.enableMessageDialog": true, //Enable messages shown in notification dialog.
 
   "coc.preferences.currentFunctionSymbolAutoUpdate": true, //Automatically update the value of b:coc_current_function on CursorMove event
+
+//-------------------------------------------------------------------------------------------------------------------------------------------
+  //coc-lightbulb
+  "lightbulb.text": {
+    // nerd-font: nf-mdi-lightbulb, text used when there're code actions
+    "default": "💡",
+    // nerd-font: nf-mdi-auto_fix, text used when there're code actions and quickfix exists
+    "quickfix": "🔔"
+  },
+
+//--------------------------------------------------------------------------------------------
+  //coc-symbol-line
+  "symbol-line.separator": "  ",
+
+//----------------------------------
+  //coc-highlight
+  "colors.enable": true,
+
 }
